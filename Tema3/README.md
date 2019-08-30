@@ -4,8 +4,8 @@
     <li>Concéptos y términos</li>
     <li>Codificación de programas</li>
     <ol>
-        <li>[Apuntadores a estructuras](https://github.com/gandresto/ing-software-2020/Tema3/b1.cpp)</li>
-        <li>[Estructuras con apuntadores](https://github.com/gandresto/ing-software-2020/Tema3/b1.cpp)</li>
-        <li>[Apuntadores a estructuras con apuntadores](https://github.com/gandresto/ing-software-2020/Tema3/b1.cpp)</li>
+        <li><a href="https://github.com/gandresto/ing-software-2020/Tema3/b1.cpp">Apuntadores a estructuras</a></li>
+        <li><a href="https://github.com/gandresto/ing-software-2020/Tema3/b2.cpp">Estructuras con apuntadores</a></li>
+        <li><a href="https://github.com/gandresto/ing-software-2020/Tema3/b3.cpp">Apuntadores a estructuras con apuntadores</a></li>
     </ol>
 </ol>
