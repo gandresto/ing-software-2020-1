@@ -22,22 +22,11 @@ int main(void){
 string *(*(*CreaFnApArApArApSt (void))[2])[2]{
     string *(*(*pApArApArApSt)[2])[2] = 
             (string*(*(*)[2])[2]) new (string *(*[2])[2]);
-    string **XApApSt = new (string * [2]);
-    string **YApApSt = new (string * [2]);
-
-    //Inicializando los arreglos de apuntadores a strings
-    XApApSt[0] = new string;
-    XApApSt[1] = new string;
-    YApApSt[0] = new string;
-    YApApSt[1] = new string;
-
-    *XApApSt[0] = "Hola";
-    *XApApSt[1] = "mundo";
-    *YApApSt[0] = "como";
-    *YApApSt[1] = "estas?";
-
-    (*pApArApArApSt)[0] = (string *(*)[2]) XApApSt;
-    (*pApArApArApSt)[1] = (string *(*)[2]) YApApSt;
+            
+    *(*(*pApArApArApSt)[0])[0] = "Hola";
+    *(*(*pApArApArApSt)[0])[1] = "mundo";
+    *(*(*pApArApArApSt)[1])[0] = "como";
+    *(*(*pApArApArApSt)[0])[1] = "estas?";
 
     return pApArApArApSt;
 }
