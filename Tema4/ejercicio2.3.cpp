@@ -1,7 +1,5 @@
 /*
-Ejercicio
-    Sean XArEn, YArEn y ZArEn con valores enteros ordenados ascendentemente. 
-    Intercale en apuntador a enteros zApEn ambos vectores ordenadios también ascendentemente
+
 */
 #include <iostream>
 
@@ -48,11 +46,6 @@ EsDatos *LeeVectorFnApEsDatos(){
     for (size_t j = 0; j < pApEsDatos->longEn; j++){
         cin >> (pApEsDatos->pApEn)[j];
     }
-/*     cout << endl;
-    for (size_t j = 0; j < pApEsDatos->longEn; j++){
-        cout << (pApEsDatos->pApEn)[j] << " ";
-    }
-    cout << endl; */
     return pApEsDatos;
 }
 
