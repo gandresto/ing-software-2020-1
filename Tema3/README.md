@@ -1,4 +1,4 @@
-## Tema 3. Apuntadores y estructuras
+# Tema 3. Apuntadores y estructuras
 
 <ol type="a">
     <li>Concéptos y términos</li>

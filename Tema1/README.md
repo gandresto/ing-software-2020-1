@@ -1,4 +1,4 @@
-# Apuntadores y arreglos estáticos, y su asociación
+# Tema 1. Apuntadores y arreglos estáticos, y su asociación
 
 ## Objetivos
 
