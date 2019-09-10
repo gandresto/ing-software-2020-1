@@ -64,21 +64,28 @@ int main(int argc, char const *argv[])
     int *pApEn = XVcEn;
     int valorEn = 0;
     int cols = 0, rows = 0;
+    char repetir;
 
-    cout << "Dame valor de columnas y renglones para buscar en la matriz. (valores de 0 a 4)" << endl;
-    cin >> cols >> rows;
+    do{
+        cout << "Dame valor de columnas y renglones para buscar en la matriz. (valores de 0 a 4)" << endl;
+        cin >> cols >> rows;
 
-    valorEn = EncuentraValorFnEn(pApEn, cols, rows);
-    cout << "Arbol sin reducir." << endl;
-    cout << "\tEl valor en esa posicion es: " << valorEn << endl << endl;
+        valorEn = EncuentraValorFnEn(pApEn, cols, rows);
+        cout << "Arbol sin reducir." << endl;
+        cout << "\tEl valor en esa posicion es: " << valorEn << endl << endl;
 
-    valorEn = EncuentraValorYLogicoFnEn(pApEn, cols, rows);
-    cout << "Arbol reducido con regla de y logico." << endl;
-    cout << "\tEl valor en esa posicion es: " << valorEn << endl << endl;
+        valorEn = EncuentraValorYLogicoFnEn(pApEn, cols, rows);
+        cout << "Arbol reducido con regla de y logico." << endl;
+        cout << "\tEl valor en esa posicion es: " << valorEn << endl << endl;
 
-    valorEn = EncuentraValorOLogicoFnEn(pApEn, cols, rows);
-    cout << "Arbol reducido con regla de o logico." << endl;
-    cout << "\tEl valor en esa posicion es: " << valorEn << endl << endl;
+        valorEn = EncuentraValorOLogicoFnEn(pApEn, cols, rows);
+        cout << "Arbol reducido con regla de o logico." << endl;
+        cout << "\tEl valor en esa posicion es: " << valorEn << endl << endl;
+
+        cout << "Repetir programa? (s/n)" << endl;
+        cin >> repetir;
+        cout << endl;
+    }while(repetir == 's' || repetir == 'S');
 
     system("pause");
     return 0;
