@@ -1,4 +1,4 @@
-# Apuntadores y funciones
+# Tema 2. Apuntadores y funciones
 
 1. Apuntadores a funciones 
 2. Funciones que devuelven un apuntador
