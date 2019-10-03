@@ -4,13 +4,13 @@ La regla del y lógico se usa cuando hay una secuencia if anidada dentro de otra
 
 ## Ejercicios
 
-### Ejercicio 1.
+### Ejercicio 1
 
 Hacer tres funciones que devuelvan el valor en las posiciones i, j en una matriz representada por medio de un vector. La primera con árbol sistémico sin aplicar regla de y lógico ni o lógico; la segunda usando un árbol reducido con y lógico; y la tercera usando ambas reglas.
 
 [ejercicio1.cpp](./ejercicio1.cpp)
 
-### Ejercicio 2.
+### Ejercicio 2
 
 Hacer una función que sume dos matrices representadas por medio de vectores, luego que muestre el resultado en pantalla.
 
