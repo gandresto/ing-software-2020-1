@@ -56,15 +56,13 @@ template <class Gn>
 void CsNotaMex<Gn>::CreaFa(CsBase<Gn> &LaCsBaseGn) {
 	pApArApArApGn = (Gn *(*(*)[2])[3])new (Gn *(*[2])[3]);
 	
-	
-	(*pApArApArApGn)[0] = (Gn *(*)[3])new (Gn *[3]);
-	(*pApArApArApGn)[1] = (Gn *(*)[3])new (Gn *[3]);
-	
-	for(int iEn = 0; iEn < 2; iEn++)
+	for(int iEn = 0; iEn < 2; iEn++){
+		(*pApArApArApGn)[iEn] = (Gn *(*)[3])new (Gn *[3]);
 		for(int jEn = 0; jEn < 3; jEn++) {
 			(*(*pApArApArApGn)[iEn])[jEn] = new Gn;
 			*(*(*pApArApArApGn)[iEn])[jEn] = LaCsBaseGn.BaseFaGn();
 		}
+	}
 }
 //
 template <class Gn>
@@ -91,7 +89,7 @@ void CsNotaMex<Gn>::SuprimeDatosDinamicosFa(void) {
 			delete (*(*pApArApArApGn)[iEn])[jEn];
 			(*(*pApArApArApGn)[iEn])[jEn] = NULL;	// El operador delete no resetea el apuntador a nulo, el algunos
 													// sistemas si. Como una buena practica, lo mejor es hacerlo 
-													// explicitamente como aquí se muestra.
+													// explicitamente como aquï¿½ se muestra.
 		}
 		delete [](*pApArApArApGn)[iEn];
 		(*pApArApArApGn)[iEn] = NULL;				// Idem
