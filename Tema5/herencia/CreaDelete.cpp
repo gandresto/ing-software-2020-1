@@ -8,7 +8,8 @@ using namespace std;
 template <class Gn>
 class CsBase {
 public:
-	virtual Gn BaseFaGn(void) = 0;
+	virtual Gn BaseFaGn(void) = 0; // Que esté igualado significa que no está definido su código
+
 };
 //
 template <class Gn>
@@ -44,7 +45,8 @@ class CsNotaMex {
 public:
 	CsNotaMex(void);
 	~CsNotaMex(void);
-	void CreaFa(CsBase<Gn> &);
+	void CreaFa(CsBase<Gn> &); 	// El argumento no se copia, se usa la referencia a su objeto
+								// Esto nos sirve para crear polimorfismo
 	void ExhibeFa(void);
 	void SuprimeDatosDinamicosFa(void);
 private:
