@@ -116,7 +116,7 @@ void CsNotaMex<Gn>::ExhibeFa(void) {
 /*
 	El programa principal
 */
-main(void) {
+int main(int argc, char const *argv[]){
 	CsBaseEn<int> LaCsBaseEn;
 	CsNotaMex<int> LaCsNotaMexEn;
 	LaCsNotaMexEn.CreaFa(LaCsBaseEn);
@@ -138,6 +138,7 @@ main(void) {
 	LaCsNotaMexCa.CreaFa(LaCsBaseCa);
 	LaCsNotaMexCa.ExhibeFa();
 	LaCsNotaMexCa.SuprimeDatosDinamicosFa();
-	LaCsNotaMexCa.ExhibeFa();		
+	LaCsNotaMexCa.ExhibeFa();
+	return 0;
 }
 
