@@ -13,19 +13,18 @@ void ExibeListaFn(EsNodo *ProApEsNodo){
     cout << "[" << pApEsNodo->DatoCa << "|/]" << endl;    
 }
 
-EsNodo * CreaListaFnApEsodo(int NumIteamsEn){
+EsNodo * CreaListaFnApEsNodo(int NumIteamsEn){
     if(NumIteamsEn<1) return NULL;
     EsNodo *pApEsNodo = new EsNodo;
     EsNodo *qApEsNodo, *ProApEsNodo; // ProApEsNodo : Nodo Primero
-    //pApEsNodo->DatoCa = 'A';
-    //pApEsNodo->SigApEsNodo = NULL;
+    ProApEsNodo = pApEsNodo;
     for(int i = 0; i<NumIteamsEn; i++){
-        qApEsNodo = new EsNodo;
         cout << "Ingresa un caracter: ";
-        cin >> qApEsNodo->DatoCa;
-        pApEsNodo->SigApEsNodo=qApEsNodo;
+        cin >> pApEsNodo->DatoCa;
+        qApEsNodo = new EsNodo;
+        pApEsNodo->SigApEsNodo=qApEsNodo;        
         pApEsNodo=qApEsNodo;
     }
-    qApEsNodo->SigApEsNodo=NULL;
+    pApEsNodo=NULL;
     return ProApEsNodo;
 }
