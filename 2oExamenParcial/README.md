@@ -1,11 +1,16 @@
 # Segundo Examen Parcial
 
-1. 
-2. 
+## Ejercicio 1.
+
+Con números del uno al 100, imprimir "Hola" si el número es múltiplo de 3, "mundo" si es múltiplo de 5, "Hola mundo" si es múltiplo de ambos, "No hola mundo" si no es múltiplo de ninguno.
+
+## Ejercicio 2.
+
+Hacer un sumador binario.
 
 ## Ejercicio 3.
 
-Dado un texto, diseñe un programa que separe las palabras y cuente las veces que aparecen en el texto
+Dado un texto, diseñe un programa que separe las palabras y cuente las veces que aparecen en el texto.
 
 Ej. "Este es un texto de prueba. Cuenta el número de veces que aparece en el texto la palabra"
 
