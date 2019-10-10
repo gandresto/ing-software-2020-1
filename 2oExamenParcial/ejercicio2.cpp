@@ -2,9 +2,9 @@
 using namespace std;
 
 void SumadorBinarioFn(int aEn, int bEn, int * cEn, int * rEn){
-    cout << "Antes: a = " << aEn;    
-    cout << ", b = " << bEn;    
-    cout << ", c = " << *cEn << endl;    
+    // cout << "Antes: a = " << aEn;    
+    // cout << ", b = " << bEn;    
+    // cout << ", c = " << *cEn << endl;    
     if(aEn==0 and bEn==0 and *cEn==0){
         *rEn = 0;
         *cEn = 0;
@@ -25,8 +25,8 @@ void SumadorBinarioFn(int aEn, int bEn, int * cEn, int * rEn){
             *rEn = 1;
             *cEn = 1;
     }
-    cout << "Después: r = " << *rEn;
-    cout << ", c = " << *cEn << endl;
+    // cout << "Después: r = " << *rEn;
+    // cout << ", c = " << *cEn << endl;
 }
 
 int main(int argc, char const *argv[])
