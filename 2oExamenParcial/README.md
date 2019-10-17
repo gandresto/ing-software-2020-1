@@ -4,9 +4,13 @@
 
 Con números del uno al 100, imprimir "Hola" si el número es múltiplo de 3, "mundo" si es múltiplo de 5, "Hola mundo" si es múltiplo de ambos, "No hola mundo" si no es múltiplo de ninguno.
 
+[ejercicio1.cpp](./ejercicio1.cpp)
+
 ## Ejercicio 2.
 
 Hacer un sumador binario.
+
+[ejercicio2.cpp](./ejercicio2.cpp)
 
 ## Ejercicio 3.
 
@@ -20,4 +24,4 @@ p -> [ 1 | * ] -> "Este"
      [ 2 | * ] -> "el"
      [ . | . ]
 
-[ejercicio1.cpp](./ejercicio1.cpp)
+[ejercicio3.cpp](./ejercicio3.cpp)
