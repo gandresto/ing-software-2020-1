@@ -85,8 +85,8 @@ ListaCuentasStrEsDatos * OrdenaFnApCuentaStrEsDatos(ListaStrEsDatos * apListaNoO
                 pApListaCuenta->pApCuentastrEsDatos[j].cuentaEn ++;
                 encontrada = true;
 
-                cout << pApListaCuenta->pApCuentastrEsDatos[j].cuentaEn << " : ";
-                cout << pApListaCuenta->pApCuentastrEsDatos[j].palabraSt << endl;
+                // cout << pApListaCuenta->pApCuentastrEsDatos[j].cuentaEn << " : ";
+                // cout << pApListaCuenta->pApCuentastrEsDatos[j].palabraSt << endl;
                 break;
             }
         }
@@ -102,8 +102,8 @@ ListaCuentasStrEsDatos * OrdenaFnApCuentaStrEsDatos(ListaStrEsDatos * apListaNoO
             qApCuentastrEsDatos[pApListaCuenta->tam].palabraSt = palabra;
             qApCuentastrEsDatos[pApListaCuenta->tam].cuentaEn = 1;
 
-            cout << qApCuentastrEsDatos[pApListaCuenta->tam].cuentaEn << " : ";
-            cout << qApCuentastrEsDatos[pApListaCuenta->tam].palabraSt << endl;
+            // cout << qApCuentastrEsDatos[pApListaCuenta->tam].cuentaEn << " : ";
+            // cout << qApCuentastrEsDatos[pApListaCuenta->tam].palabraSt << endl;
             pApListaCuenta->pApCuentastrEsDatos = qApCuentastrEsDatos;
             pApListaCuenta->tam++;
         }
@@ -113,14 +113,23 @@ ListaCuentasStrEsDatos * OrdenaFnApCuentaStrEsDatos(ListaStrEsDatos * apListaNoO
     return pApListaCuenta;
 }
 
+void ExhibeListaCuentaFn(ListaCuentasStrEsDatos * pApListaCuenta){
+    for(int i=0; i<pApListaCuenta->tam; i++){
+        cout << pApListaCuenta->pApCuentastrEsDatos[i].cuentaEn << " : ";
+        cout << pApListaCuenta->pApCuentastrEsDatos[i].palabraSt << endl;
+    }
+}
+
 int main(int argc, char const *argv[])
 {
     string texto = "Este es un texto de prueba. \
     Cuenta el numero de veces que aparece en el \
-    texto la palabra. Este numero es una palabra";
+    texto la palabra. Este numero es una palabra.\
+    Ahora escribo muchas veces de de de de de de";
 
     ListaStrEsDatos * pApListaStrEsDatos = SeparaPalabrasFnListaStrEsDatos(texto);
     ExhibeListaFn(pApListaStrEsDatos);
     ListaCuentasStrEsDatos * pApListaCuenta = OrdenaFnApCuentaStrEsDatos(pApListaStrEsDatos);
+    ExhibeListaCuentaFn(pApListaCuenta);
     return 0;
 }
