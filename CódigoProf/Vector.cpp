@@ -66,6 +66,8 @@ public:
     //
     Gn &operator[]( int );                 			   		// Operador subindice
 	//
+	const CsVector &operator+(const CsVector<Gn> &);
+
 	const CsVector &operator=( const CsVector<Gn> & );
 	//	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	void AsignaFa( int, const Gn & );
@@ -101,6 +103,7 @@ public:
 	    
 	    return salida;
 	}
+
 private:
     Gn *_DbApGn;                                    		// Apuntador base (al 1er item del vector)
     int _NoActualItemsEn;                                   // N�mero actual de items en el vector
@@ -150,19 +153,30 @@ template <class Gn>
 CsVector<Gn>::~CsVector(void){
     delete [] _DbApGn;
 }
-//
+// Para escritura en el arreglo
 template <class Gn>
 Gn &CsVector<Gn>::operator[]( const int indiceEn) const {
     SeRequiereQueFn( 0 <= indiceEn && indiceEn <= _NoActualItemsEn, "posEn fuera de rango: 0 > posEn O posEn > _NoMaxItemsEn\n" );
     return _DbApGn[indiceEn];
 }
-//
+// Para lectura en el arreglo
 template <class Gn>
 Gn &CsVector<Gn>::operator[]( int indiceEn) {
     SeRequiereQueFn( 0 <= indiceEn && indiceEn <= _NoActualItemsEn, "posEn fuera de rango: 0 > posEn O posEn > _NoMaxItemsEn\n" );
     return _DbApGn[indiceEn];
 }
-//
+
+template <class Gn>
+const CsVector<Gn> &CsVector<Gn>::operator+(const CsVector<Gn> &IzqRfCsVector) {
+	SeRequiereQueFn( _NoActualItemsEn == IzqRfCsVector._NoActualItemsEn, "Error Arreglos con diferente dimension\n" );
+	CsVector<Gn>  *pApCsVector = new CsVector<Gn>(_NoActualItemsEn);
+	for (int i = 0; i<_NoActualItemsEn; i++){
+		pApCsVector[i] = _DbApGn[i] + IzqRfCsVector[i];
+		cout << pApCsVector[i];
+	}
+	return *pApCsVector;
+}
+// 
 template <class Gn>
 const CsVector<Gn> &CsVector<Gn>::operator=(const CsVector<Gn> &DerCsVector) {
 	if(&DerCsVector != this) {
@@ -234,9 +248,13 @@ main( void ) {
     cout << "ElCsVector = El0CsVector: " << ElCsVector << endl;
 	cout << "pApCsVector: " << *pApCsVector << endl;
 	
+	cout << "Suma de vectores\n";
+	cout << El0CsVector + ElCsVector << endl;
+
 	*pApCsVector = ElCsVector;  
 	cout << "pApCsVector: " << *pApCsVector << endl;
 	ElCsVector = ElCsVector;
+
 	
 	CsVector<float> El1CsVector( 10 );
 	
@@ -254,13 +272,13 @@ main( void ) {
 	cout << *(*AlfaCsVector[0])[1] << endl;
 //	+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+
 	vector<int> myvector;
-	std::cout << "capacity: " << (int) myvector.capacity() << '\n';
+	cout << "capacity: " << (int) myvector.capacity() << '\n';
 	// set some content in the vector:
 	for (int iEn = 0; iEn < 100; iEn++) myvector.push_back(iEn);
 	
-	std::cout << "size: " << (int) myvector.size() << '\n';
-	std::cout << "capacity: " << (int) myvector.capacity() << '\n';
-	std::cout << "max_size: " << (int) myvector.max_size() << '\n';
+	cout << "size: " << (int) myvector.size() << '\n';
+	cout << "capacity: " << (int) myvector.capacity() << '\n';
+	cout << "max_size: " << (int) myvector.max_size() << '\n';
 	
 	int PotenciaEn = 0;
 	for (int iEn = 0; iEn < 5; iEn++) {
@@ -273,6 +291,8 @@ main( void ) {
 		
 	if(!ElCsVector.EsVacioFaBo())
 		cout << "No es vacio\n";
+
+	// CsVector<float> ResCsVector = ;
 }
 //	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
