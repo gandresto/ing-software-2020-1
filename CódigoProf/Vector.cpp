@@ -171,8 +171,8 @@ const CsVector<Gn> &CsVector<Gn>::operator+(const CsVector<Gn> &IzqRfCsVector) {
 	SeRequiereQueFn( _NoActualItemsEn == IzqRfCsVector._NoActualItemsEn, "Error Arreglos con diferente dimension\n" );
 	CsVector<Gn>  *pApCsVector = new CsVector<Gn>(_NoActualItemsEn);
 	for (int i = 0; i<_NoActualItemsEn; i++){
-		pApCsVector[i] = _DbApGn[i] + IzqRfCsVector[i];
-		cout << pApCsVector[i];
+		pApCsVector->_DbApGn[i] = _DbApGn[i] + IzqRfCsVector._DbApGn[i];
+		//cout << pApCsVector->_DbApGn[i];
 	}
 	return *pApCsVector;
 }
